@@ -1,0 +1,10 @@
+{
+ "Description": "Android Snackbar binding for Fusetools",
+  "Packages": [
+    "Fuse",
+    "FuseJS",
+  ],
+  "Includes": [
+    "Snackbar.uno:Source"
+  ]
+}

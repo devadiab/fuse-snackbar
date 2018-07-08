@@ -1,0 +1,21 @@
+<App>
+	<JavaScript>
+		var snackBar = require("Snackbar");
+		module.exports={
+			showSnackbar : function(){
+				snackBar.Show("The Message has been deleted successfuly !","UNDO",30000).then(function(){
+					console.log("I'm clicked right now ;) ");
+				});
+			}
+		}
+	</JavaScript>
+	<DockPanel>
+		<StatusBarBackground Dock="Top"/>
+		<StackPanel Alignment="Center">
+			<Button Clicked="{showSnackbar}">
+				<Text Value="Show up!"/>
+			</Button>
+		</StackPanel>
+		<BottomBarBackground Dock="Bottom"/>
+	</DockPanel>
+</App>

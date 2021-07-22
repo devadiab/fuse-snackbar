@@ -14,7 +14,9 @@ using Uno.Compiler.ExportTargetInterop;
 [ForeignInclude(Language.Java, "android.app.Activity")]
 [ForeignInclude(Language.Java, "android.view.View")]
 [ForeignInclude(Language.Java, "android.view.ViewGroup")]
-[ForeignInclude(Language.Java, "android.support.design.widget.CoordinatorLayout")]
+//[ForeignInclude(Language.Java, "android.support.design.widget.CoordinatorLayout")]
+[ForeignInclude(Language.Java, "androidx.appcompat.app.AppCompatActivity")]
+[ForeignInclude(Language.Java, "androidx.coordinatorlayout.widget.CoordinatorLayout")]
 [ForeignInclude(Language.Java, "android.content.res.Resources")]
 [ForeignInclude(Language.Java, "android.widget.FrameLayout")]
 [UXGlobalModule]
@@ -58,7 +60,8 @@ public class Snackbar  : NativeModule
             @Override
             public void run() {
                 View viewGroup = context.getWindow().getDecorView().getRootView();
-                android.support.design.widget.Snackbar mySnackbar = android.support.design.widget.Snackbar.make(
+                //android.support.design.widget.Snackbar mySnackbar = android.support.design.widget.Snackbar.make(
+		com.google.android.material.snackbar.Snackbar mySnackbar = com.google.android.material.snackbar.Snackbar.make(
                         viewGroup,
                         message,
                         duration);
